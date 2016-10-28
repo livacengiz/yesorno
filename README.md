@@ -1,8 +1,12 @@
 #Yes or No site generator
 
-##Usage
-
 ##Project requirements
 - Ruby
 - Sinatra
+
+## Usage
+
+```
+user$ bundle install
+user$ ruby application.rb
 ```
