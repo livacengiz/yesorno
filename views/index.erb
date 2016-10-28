@@ -1,0 +1,29 @@
+<head>
+  <title>Yes or No Site Generator</title>
+</head>
+<body>
+  <div class="content">
+    <a href="/"><h1 class="logo"></h1></a>
+    <form method='post' id='questionForm'>
+      <input type="text"
+             placeholder=" Question?"
+             id="question"
+             required
+             >
+      <div>
+        <% Choices.each do |id, text| %>
+            <label>
+              <input type='radio' name='answer' value='<%= id %>' id='answer' required />
+              <%= text %>
+            </label>
+        <% end %>
+          <% flash.keys.each do |type| %>
+            <div class="warning">
+            <%= flash[type] %>
+            </div>
+          <% end %>
+      </div>
+      <button type='submit' onclick="makeurl()" id="send">Create</button>
+    </form>
+  </div>
+</body>
